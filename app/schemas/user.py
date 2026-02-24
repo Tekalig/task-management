@@ -11,6 +11,12 @@ class UserCreate(BaseModel):
     email: EmailStr
     password: str
 
+class UserUpdate(BaseModel):
+    """Schema for updating user information."""
+
+    username: Optional[str] = None
+    email: Optional[EmailStr] = None
+    password: Optional[str] = None
 
 class UserResponse(BaseModel):
     """Schema for user data returned in responses (password is never exposed)."""
